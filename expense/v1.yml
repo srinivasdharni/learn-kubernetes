@@ -5,7 +5,7 @@
 	spec:
 	  containers:
 	    - name: frontend
-	      image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/frontend:2.0.0
+	      image: 624783896224.dkr.ecr.us-east-1.amazonaws.com/frontend
 	  imagePullSecrets:
 	    - name: aws-ecr
 	---
@@ -16,7 +16,7 @@
 	spec:
 	  containers:
 	    - name: backend
-	      image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/backend:2.0.0
+	      image: 624783896224.dkr.ecr.us-east-1.amazonaws.com/backend
 	  imagePullSecrets:
 	    - name: aws-ecr
 	---
