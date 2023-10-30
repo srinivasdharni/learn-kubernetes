@@ -34,6 +34,9 @@ spec:
   containers:
     - name: backend
       image: 624783896224.dkr.ecr.us-east-1.amazonaws.com/backend
+      env:
+        - name: DB_HOST
+          value: mysql
   imagePullSecrets:
     - name: aws-ecr
 ---
