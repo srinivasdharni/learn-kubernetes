@@ -10,7 +10,7 @@ spec:
       image: 624783896224.dkr.ecr.us-east-1.amazonaws.com/frontend
   imagePullSecrets:
     - name: aws-ecr
- ---
+---
 apiVersion: v1
 kind: Service
 metadata:
