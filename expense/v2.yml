@@ -81,10 +81,10 @@ spec:
         image: 624783896224.dkr.ecr.us-east-1.amazonaws.com/expense-schema-load
         env:
         - name: DBHOST
-          value: mysql
+          value: dev-mysql.cluster-cguk3dhtfjx0.us-east-1.rds.amazonaws.com
         - name: DBPASS
-          value: "ExpenseApp@1"
+          value: "expensedev1234"
         - name: DBUSER
-          value: root
+          value: mysqlrdsadmin
         - name: COMPONENT
           value: backend
