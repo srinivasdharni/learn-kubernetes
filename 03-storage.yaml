@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: storage-demo
+spec:
+  initContainers:
+    - name: con1
+      image: centos
+      command: ["curl", "-o", "/parameters/frontend.zip", "https://expense-artifacts.s3.amazonaws.com/frontend.zip"]
+      volumeMounts:
+      - mountPath: /parameters
+        name: temp
+  containers:
+    - name: con2
+      image: centos
+      command: ["tail", "-f", "/dev/null"]
+      volumeMounts:
+      - mountPath: /parameters
+        name: temp
+  volumes:
+  - name: temp
+    emptyDir:
+      sizeLimit: 5Mi
